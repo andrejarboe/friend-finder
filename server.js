@@ -28,7 +28,8 @@ app.use(bodyParser.json());
 // ================================================================================
 
 require("./app/routing/apiRoutes")(app);
-// require("./routes/htmlRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
+
 
 // =============================================================================
 // LISTENER

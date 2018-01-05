@@ -24,7 +24,7 @@ if(validateForm()){
   var newFriend = {
     name: $("#name").val().trim(),
     photo: $("#photo").val().trim(),
-    score: [
+    scores: [
       $("#q1").val(),
       $("#q2").val(),
       $("#q3").val(),

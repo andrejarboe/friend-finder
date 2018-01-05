@@ -4,6 +4,7 @@
 // ===============================================================================
 var path = require("path");
 
+
 // ===============================================================================
 // ROUTING
 // ===============================================================================
@@ -16,6 +17,8 @@ module.exports = function(app) {
 
     app.get("/survey", function(req, res){
       res.sendFile(path.join(__dirname, "../public/survey.html"));
+      // res.sendFile(path.join(__dirname, "../public/assets/javascript/survey.js"));      
+      
     });
 
     // If no matching route is found default to home

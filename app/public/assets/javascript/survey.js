@@ -39,20 +39,26 @@ if(validateForm()){
   };
   console.log(newFriend);
 
-  $.post("/api/friends", newFriend);
+  $.post("/api/friends", newFriend, function(data){
+    $("#match-name").text(data.name);
+    $("#match-img").attr("src", data.photo);
 
-  // $("#name").val("");  
-  // $("#photo").val("");  
-  // $("#q2").val("");
-  // $("#q1").val("");
-  // $("#q3").val("");
-  // $("#q4").val("");
-  // $("#q5").val("");
-  // $("#q6").val("");
-  // $("#q7").val("");
-  // $("#q8").val("");
-  // $("#q9").val("");
-  // $("#q10").val("");  
+    // Show the modal with the best match
+    $("#results-modal").modal("toggle");
+  });
+
+  $("#name").val("");  
+  $("#photo").val("");  
+  $("#q2").val("");
+  $("#q1").val("");
+  $("#q3").val("");
+  $("#q4").val("");
+  $("#q5").val("");
+  $("#q6").val("");
+  $("#q7").val("");
+  $("#q8").val("");
+  $("#q9").val("");
+  $("#q10").val("");  
 
   }else {
     alert("Please fill out all fields before submitting!");

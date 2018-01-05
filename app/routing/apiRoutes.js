@@ -36,17 +36,11 @@ module.exports = function (app) {
         bestMatchPerson = friendsData[i];
       }
 
-      console.log("friend " + i + " match score is: " + tempMatchScore);
-      console.log("best match so far is: "+bestMatchScore +"\n");
 
       tempMatchScore = 0;
     }
 
-    console.log("---------------------------");
-    console.log("The best match is: "+bestMatchPerson);
-    console.log("---------------------------");
     res.json(bestMatchPerson);
-    // console.log(friendsData[0].scores); 
     friendsData.push(req.body);
   });
 }
